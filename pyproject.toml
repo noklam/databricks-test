@@ -1,0 +1,17 @@
+[tool.kedro]
+package_name = "databricks_test"
+project_name = "databricks-test"
+project_version = "0.18.2"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = """
+--cov-report term-missing \
+--cov src/databricks_test -ra"""
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
